@@ -1,2 +1,2 @@
-# spotify-history
-Analyse your Spotify history over the past 12 months with the Spotify API
+# Spotify History
+This repository is for the analysis of Spotify streaming history files obtained from the SPotify website.

@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pandas = "*"
+numpy = "*"
+jupyter = "*"
+requests = "*"
+spotipy = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"

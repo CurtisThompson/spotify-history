@@ -1,0 +1,752 @@
+[
+  {
+    "endTime" : "2021-01-01 18:00",
+    "artistName" : "Little Mix",
+    "trackName" : "Sweet Melody",
+    "msPlayed" : 213693
+  },
+  {
+    "endTime" : "2021-01-01 18:05",
+    "artistName" : "MEDUZA",
+    "trackName" : "Paradise (feat. Dermot Kennedy)",
+    "msPlayed" : 167903
+  },
+  {
+    "endTime" : "2021-01-01 18:08",
+    "artistName" : "Shane Codd",
+    "trackName" : "Get Out My Head",
+    "msPlayed" : 204933
+  },
+  {
+    "endTime" : "2021-01-01 18:12",
+    "artistName" : "Ed Sheeran",
+    "trackName" : "Afterglow",
+    "msPlayed" : 185486
+  },
+  {
+    "endTime" : "2021-01-01 18:15",
+    "artistName" : "Ariana Grande",
+    "trackName" : "positions",
+    "msPlayed" : 172324
+  },
+  {
+    "endTime" : "2021-01-01 18:18",
+    "artistName" : "KSI",
+    "trackName" : "Really Love (feat. Craig David & Digital Farm Animals)",
+    "msPlayed" : 177500
+  },
+  {
+    "endTime" : "2021-01-04 09:15",
+    "artistName" : "Ed Sheeran",
+    "trackName" : "Castle on the Hill",
+    "msPlayed" : 261153
+  },
+  {
+    "endTime" : "2021-01-04 09:19",
+    "artistName" : "Ed Sheeran",
+    "trackName" : "Save Myself",
+    "msPlayed" : 247106
+  },
+  {
+    "endTime" : "2021-01-04 09:23",
+    "artistName" : "Ed Sheeran",
+    "trackName" : "Galway Girl",
+    "msPlayed" : 170826
+  },
+  {
+    "endTime" : "2021-01-04 09:26",
+    "artistName" : "Ed Sheeran",
+    "trackName" : "Beautiful People (feat. Khalid)",
+    "msPlayed" : 197866
+  },
+  {
+    "endTime" : "2021-01-04 09:31",
+    "artistName" : "Ed Sheeran",
+    "trackName" : "New Man",
+    "msPlayed" : 189280
+  },
+  {
+    "endTime" : "2021-01-04 09:36",
+    "artistName" : "Ed Sheeran",
+    "trackName" : "How Would You Feel (Paean)",
+    "msPlayed" : 280533
+  },
+  {
+    "endTime" : "2021-01-04 09:37",
+    "artistName" : "Ed Sheeran",
+    "trackName" : "Nancy Mulligan",
+    "msPlayed" : 31998
+  },
+  {
+    "endTime" : "2021-01-04 09:38",
+    "artistName" : "Retro Nicotine",
+    "trackName" : "Dennis Rodman",
+    "msPlayed" : 9170
+  },
+  {
+    "endTime" : "2021-01-04 09:38",
+    "artistName" : "KBFR",
+    "trackName" : "Hood Baby",
+    "msPlayed" : 700
+  },
+  {
+    "endTime" : "2021-01-04 09:40",
+    "artistName" : "24kGoldn",
+    "trackName" : "Mood (feat. iann dior)",
+    "msPlayed" : 140525
+  },
+  {
+    "endTime" : "2021-01-04 09:42",
+    "artistName" : "Dixie",
+    "trackName" : "Roommates",
+    "msPlayed" : 29009
+  },
+  {
+    "endTime" : "2021-01-04 09:42",
+    "artistName" : "Palm Paradise",
+    "trackName" : "Paranoid",
+    "msPlayed" : 110640
+  },
+  {
+    "endTime" : "2021-01-05 19:12",
+    "artistName" : "Dead Prez",
+    "trackName" : "We Want Freedom",
+    "msPlayed" : 273440
+  },
+  {
+    "endTime" : "2021-01-05 19:18",
+    "artistName" : "Dead Prez",
+    "trackName" : "Mind Sex",
+    "msPlayed" : 291066
+  },
+  {
+    "endTime" : "2021-01-05 19:20",
+    "artistName" : "Dead Prez",
+    "trackName" : "Assassination",
+    "msPlayed" : 120866
+  },
+  {
+    "endTime" : "2021-01-05 19:35",
+    "artistName" : "Dead Prez",
+    "trackName" : "Propaganda",
+    "msPlayed" : 312733
+  },
+  {
+    "endTime" : "2021-01-05 19:39",
+    "artistName" : "Dead Prez",
+    "trackName" : "Hip Hop",
+    "msPlayed" : 226200
+  },
+  {
+    "endTime" : "2021-01-07 18:48",
+    "artistName" : "Dead Prez",
+    "trackName" : "You'll Find a Way",
+    "msPlayed" : 2780
+  },
+  {
+    "endTime" : "2021-01-07 18:48",
+    "artistName" : "Dead Prez",
+    "trackName" : "Wolves (Intro)",
+    "msPlayed" : 1030
+  },
+  {
+    "endTime" : "2021-01-07 18:48",
+    "artistName" : "Dead Prez",
+    "trackName" : "Hip Hop",
+    "msPlayed" : 715
+  },
+  {
+    "endTime" : "2021-01-07 19:17",
+    "artistName" : "Taylor Swift",
+    "trackName" : "closure",
+    "msPlayed" : 180653
+  },
+  {
+    "endTime" : "2021-01-07 19:20",
+    "artistName" : "Taylor Swift",
+    "trackName" : "Our Song",
+    "msPlayed" : 203440
+  },
+  {
+    "endTime" : "2021-01-07 19:27",
+    "artistName" : "Taylor Swift",
+    "trackName" : "Cornelia Street - Live From Paris",
+    "msPlayed" : 296013
+  },
+  {
+    "endTime" : "2021-01-07 19:30",
+    "artistName" : "Taylor Swift",
+    "trackName" : "Style",
+    "msPlayed" : 174819
+  },
+  {
+    "endTime" : "2021-01-10 10:58",
+    "artistName" : "J. Cole",
+    "trackName" : "Photograph",
+    "msPlayed" : 17451
+  },
+  {
+    "endTime" : "2021-01-10 10:58",
+    "artistName" : "J. Cole",
+    "trackName" : "Lion King On Ice",
+    "msPlayed" : 3213
+  },
+  {
+    "endTime" : "2021-01-10 11:02",
+    "artistName" : "J. Cole",
+    "trackName" : "Immortal",
+    "msPlayed" : 201666
+  },
+  {
+    "endTime" : "2021-01-10 11:06",
+    "artistName" : "J. Cole",
+    "trackName" : "Work Out",
+    "msPlayed" : 235320
+  },
+  {
+    "endTime" : "2021-01-10 11:09",
+    "artistName" : "J. Cole",
+    "trackName" : "Can't Get Enough",
+    "msPlayed" : 225960
+  },
+  {
+    "endTime" : "2021-01-10 11:13",
+    "artistName" : "J. Cole",
+    "trackName" : "Neighbors",
+    "msPlayed" : 216520
+  },
+  {
+    "endTime" : "2021-01-10 11:17",
+    "artistName" : "J. Cole",
+    "trackName" : "Deja Vu",
+    "msPlayed" : 264746
+  },
+  {
+    "endTime" : "2021-01-10 11:21",
+    "artistName" : "J. Cole",
+    "trackName" : "Nobody's Perfect",
+    "msPlayed" : 190653
+  },
+  {
+    "endTime" : "2021-01-10 11:24",
+    "artistName" : "J. Cole",
+    "trackName" : "Ville Mentality",
+    "msPlayed" : 194346
+  },
+  {
+    "endTime" : "2021-01-10 11:27",
+    "artistName" : "J. Cole",
+    "trackName" : "1985 - Intro to “The Fall Off”",
+    "msPlayed" : 190176
+  },
+  {
+    "endTime" : "2021-01-10 11:31",
+    "artistName" : "J. Cole",
+    "trackName" : "Forbidden Fruit (feat. Kendrick Lamar)",
+    "msPlayed" : 231378
+  },
+  {
+    "endTime" : "2021-01-11 09:57",
+    "artistName" : "Camila Cabello",
+    "trackName" : "Something's Gotta Give",
+    "msPlayed" : 236360
+  },
+  {
+    "endTime" : "2021-01-11 10:01",
+    "artistName" : "Camila Cabello",
+    "trackName" : "Inside Out",
+    "msPlayed" : 182560
+  },
+  {
+    "endTime" : "2021-01-11 10:04",
+    "artistName" : "Camila Cabello",
+    "trackName" : "Consequences",
+    "msPlayed" : 178466
+  },
+  {
+    "endTime" : "2021-01-11 10:08",
+    "artistName" : "Shawn Mendes",
+    "trackName" : "Señorita",
+    "msPlayed" : 190799
+  },
+  {
+    "endTime" : "2021-01-12 16:21",
+    "artistName" : "Nas",
+    "trackName" : "If I Ruled the World (Imagine That) (feat. Lauryn Hill)",
+    "msPlayed" : 3154
+  },
+  {
+    "endTime" : "2021-01-12 16:26",
+    "artistName" : "Nas",
+    "trackName" : "N.Y. State of Mind",
+    "msPlayed" : 292000
+  },
+  {
+    "endTime" : "2021-01-17 09:50",
+    "artistName" : "MEDUZA",
+    "trackName" : "Paradise (feat. Dermot Kennedy)",
+    "msPlayed" : 167903
+  },
+  {
+    "endTime" : "2021-01-17 09:53",
+    "artistName" : "Miley Cyrus",
+    "trackName" : "Prisoner (feat. Dua Lipa)",
+    "msPlayed" : 169333
+  },
+  {
+    "endTime" : "2021-01-17 09:56",
+    "artistName" : "HVME",
+    "trackName" : "Goosebumps",
+    "msPlayed" : 163208
+  },
+  {
+    "endTime" : "2021-01-17 09:59",
+    "artistName" : "Wes Nelson",
+    "trackName" : "See Nobody",
+    "msPlayed" : 203650
+  },
+  {
+    "endTime" : "2021-01-17 10:02",
+    "artistName" : "Dua Lipa",
+    "trackName" : "Levitating (feat. DaBaby)",
+    "msPlayed" : 203064
+  },
+  {
+    "endTime" : "2021-01-17 10:05",
+    "artistName" : "KSI",
+    "trackName" : "Really Love (feat. Craig David & Digital Farm Animals)",
+    "msPlayed" : 177500
+  },
+  {
+    "endTime" : "2021-01-17 10:08",
+    "artistName" : "Pop Smoke",
+    "trackName" : "What You Know Bout Love",
+    "msPlayed" : 160000
+  },
+  {
+    "endTime" : "2021-01-17 10:12",
+    "artistName" : "Olivia Rodrigo",
+    "trackName" : "drivers license",
+    "msPlayed" : 242013
+  },
+  {
+    "endTime" : "2021-01-17 10:17",
+    "artistName" : "220 KID",
+    "trackName" : "Too Many Nights (with JC Stewart)",
+    "msPlayed" : 188636
+  },
+  {
+    "endTime" : "2021-01-17 10:20",
+    "artistName" : "Justin Bieber",
+    "trackName" : "Anyone",
+    "msPlayed" : 190779
+  },
+  {
+    "endTime" : "2021-01-17 10:21",
+    "artistName" : "Ariana Grande",
+    "trackName" : "34+35",
+    "msPlayed" : 5706
+  },
+  {
+    "endTime" : "2021-02-08 15:13",
+    "artistName" : "Eminem",
+    "trackName" : "Killer",
+    "msPlayed" : 195008
+  },
+  {
+    "endTime" : "2021-02-13 09:16",
+    "artistName" : "Taylor Swift",
+    "trackName" : "champagne problems",
+    "msPlayed" : 244000
+  },
+  {
+    "endTime" : "2021-02-13 09:19",
+    "artistName" : "Taylor Swift",
+    "trackName" : "gold rush",
+    "msPlayed" : 159809
+  },
+  {
+    "endTime" : "2021-03-05 14:16",
+    "artistName" : "Gil Scott-Heron",
+    "trackName" : "When You Are Who You Are",
+    "msPlayed" : 202990
+  },
+  {
+    "endTime" : "2021-03-05 14:20",
+    "artistName" : "Gil Scott-Heron",
+    "trackName" : "I'll Take Care of U",
+    "msPlayed" : 16088
+  },
+  {
+    "endTime" : "2021-03-05 14:27",
+    "artistName" : "Gil Scott-Heron",
+    "trackName" : "I Think I'll Call It Morning",
+    "msPlayed" : 209593
+  },
+  {
+    "endTime" : "2021-03-15 14:51",
+    "artistName" : "Bruno Mars",
+    "trackName" : "Finesse - Remix; feat. Cardi B",
+    "msPlayed" : 217288
+  },
+  {
+    "endTime" : "2021-03-15 14:55",
+    "artistName" : "Maroon 5",
+    "trackName" : "Beautiful Mistakes (feat. Megan Thee Stallion)",
+    "msPlayed" : 227395
+  },
+  {
+    "endTime" : "2021-03-15 14:57",
+    "artistName" : "Niall Horan",
+    "trackName" : "Nice To Meet Ya",
+    "msPlayed" : 158805
+  },
+  {
+    "endTime" : "2021-03-15 15:15",
+    "artistName" : "One Direction",
+    "trackName" : "Night Changes",
+    "msPlayed" : 242790
+  },
+  {
+    "endTime" : "2021-03-15 15:18",
+    "artistName" : "Alessia Cara",
+    "trackName" : "Out Of Love",
+    "msPlayed" : 227693
+  },
+  {
+    "endTime" : "2021-03-15 15:22",
+    "artistName" : "Bruno Mars",
+    "trackName" : "When I Was Your Man",
+    "msPlayed" : 213826
+  },
+  {
+    "endTime" : "2021-03-14 13:48",
+    "artistName" : "Brendan Maynard + 2",
+    "trackName" : "Prelude to a Kiss",
+    "msPlayed" : 264626
+  },
+  {
+    "endTime" : "2021-03-14 13:51",
+    "artistName" : "Lydia Baskow Trio",
+    "trackName" : "Nuages ​​Creux",
+    "msPlayed" : 157500
+  },
+  {
+    "endTime" : "2021-03-14 13:55",
+    "artistName" : "Tom Stills Quartet",
+    "trackName" : "Hoping",
+    "msPlayed" : 203537
+  },
+  {
+    "endTime" : "2021-03-14 14:00",
+    "artistName" : "CMC 3",
+    "trackName" : "Once I Had A Secret Love",
+    "msPlayed" : 258185
+  },
+  {
+    "endTime" : "2021-03-14 14:04",
+    "artistName" : "Richie Beirach Trio",
+    "trackName" : "Goodbye",
+    "msPlayed" : 252000
+  },
+  {
+    "endTime" : "2021-03-14 14:09",
+    "artistName" : "Rossdale Junction",
+    "trackName" : "Sleeper",
+    "msPlayed" : 225546
+  },
+  {
+    "endTime" : "2021-03-14 14:12",
+    "artistName" : "Carrie Carlton Quartet",
+    "trackName" : "City Morning Views",
+    "msPlayed" : 191562
+  },
+  {
+    "endTime" : "2021-03-14 14:16",
+    "artistName" : "MEGTARO",
+    "trackName" : "In Thoughtful",
+    "msPlayed" : 242600
+  },
+  {
+    "endTime" : "2021-03-14 14:23",
+    "artistName" : "Lisa Gordan Trio",
+    "trackName" : "Stardust",
+    "msPlayed" : 384904
+  },
+  {
+    "endTime" : "2021-03-14 14:26",
+    "artistName" : "Motor City Trio",
+    "trackName" : "Polka Dots and Moonbeams",
+    "msPlayed" : 172642
+  },
+  {
+    "endTime" : "2021-03-14 14:31",
+    "artistName" : "The Blue Room Band",
+    "trackName" : "You Go to My Head",
+    "msPlayed" : 316098
+  },
+  {
+    "endTime" : "2021-03-14 14:35",
+    "artistName" : "Foster Davies",
+    "trackName" : "The Fairies",
+    "msPlayed" : 180470
+  },
+  {
+    "endTime" : "2021-03-14 14:40",
+    "artistName" : "Hank Jones",
+    "trackName" : "Misty",
+    "msPlayed" : 282373
+  },
+  {
+    "endTime" : "2021-03-14 14:44",
+    "artistName" : "Luc Brooks",
+    "trackName" : "London Plane",
+    "msPlayed" : 199738
+  },
+  {
+    "endTime" : "2021-03-14 14:48",
+    "artistName" : "Greydon Park Band",
+    "trackName" : "Postcards",
+    "msPlayed" : 185459
+  },
+  {
+    "endTime" : "2021-03-14 14:51",
+    "artistName" : "Hudson Harris & Haim",
+    "trackName" : "Blue in Green",
+    "msPlayed" : 229884
+  },
+  {
+    "endTime" : "2021-03-14 14:55",
+    "artistName" : "Ola W Jansson",
+    "trackName" : "For Keith Jarrett",
+    "msPlayed" : 199015
+  },
+  {
+    "endTime" : "2021-03-14 15:00",
+    "artistName" : "Low City Trio",
+    "trackName" : "Copley Plaza",
+    "msPlayed" : 306712
+  },
+  {
+    "endTime" : "2021-03-14 15:04",
+    "artistName" : "Eddie Harper",
+    "trackName" : "Windless Days",
+    "msPlayed" : 168750
+  },
+  {
+    "endTime" : "2021-03-14 15:07",
+    "artistName" : "Midtown Trio",
+    "trackName" : "Last Dance",
+    "msPlayed" : 208881
+  },
+  {
+    "endTime" : "2021-03-14 15:10",
+    "artistName" : "Green Trio",
+    "trackName" : "The Summer Rain",
+    "msPlayed" : 181448
+  },
+  {
+    "endTime" : "2021-03-14 15:14",
+    "artistName" : "Newington Green",
+    "trackName" : "Guidance",
+    "msPlayed" : 240818
+  },
+  {
+    "endTime" : "2021-03-14 15:21",
+    "artistName" : "Dan Nimmer Trio",
+    "trackName" : "Just Us",
+    "msPlayed" : 338973
+  },
+  {
+    "endTime" : "2021-03-14 15:23",
+    "artistName" : "Vernon Sanders",
+    "trackName" : "Cherie",
+    "msPlayed" : 122339
+  },
+  {
+    "endTime" : "2021-04-08 08:04",
+    "artistName" : "Billy Paul",
+    "trackName" : "Your Song",
+    "msPlayed" : 390986
+  },
+  {
+    "endTime" : "2021-04-08 08:09",
+    "artistName" : "B.B. King",
+    "trackName" : "The Thrill Is Gone",
+    "msPlayed" : 324733
+  },
+  {
+    "endTime" : "2021-04-08 08:12",
+    "artistName" : "Jimmy Cliff",
+    "trackName" : "Many Rivers To Cross",
+    "msPlayed" : 163453
+  },
+  {
+    "endTime" : "2021-04-08 08:15",
+    "artistName" : "George Benson",
+    "trackName" : "This Masquerade - 2015 GH Version",
+    "msPlayed" : 196920
+  },
+  {
+    "endTime" : "2021-04-08 08:18",
+    "artistName" : "The Impressions",
+    "trackName" : "People Get Ready",
+    "msPlayed" : 163360
+  },
+  {
+    "endTime" : "2021-04-08 08:21",
+    "artistName" : "James Brown",
+    "trackName" : "Sunny",
+    "msPlayed" : 197960
+  },
+  {
+    "endTime" : "2021-04-08 08:25",
+    "artistName" : "Marvin Gaye",
+    "trackName" : "What's Going On",
+    "msPlayed" : 233000
+  },
+  {
+    "endTime" : "2021-04-08 08:28",
+    "artistName" : "George Benson",
+    "trackName" : "Since I Fell For You",
+    "msPlayed" : 178440
+  },
+  {
+    "endTime" : "2021-04-08 08:39",
+    "artistName" : "The Crusaders",
+    "trackName" : "Street Life",
+    "msPlayed" : 678200
+  },
+  {
+    "endTime" : "2021-04-08 08:41",
+    "artistName" : "Sam Cooke",
+    "trackName" : "(What A) Wonderful World - Mono",
+    "msPlayed" : 128786
+  },
+  {
+    "endTime" : "2021-04-08 08:45",
+    "artistName" : "O.V. Wright",
+    "trackName" : "Let's Straighten It Out",
+    "msPlayed" : 232093
+  },
+  {
+    "endTime" : "2021-04-08 08:51",
+    "artistName" : "The Crusaders",
+    "trackName" : "Street Life - Single Edit",
+    "msPlayed" : 332133
+  },
+  {
+    "endTime" : "2021-04-08 08:54",
+    "artistName" : "Marvin Gaye",
+    "trackName" : "I Heard It Through The Grapevine",
+    "msPlayed" : 194293
+  },
+  {
+    "endTime" : "2021-04-10 10:10",
+    "artistName" : "Taylor Swift",
+    "trackName" : "22",
+    "msPlayed" : 159809
+  },
+  {
+    "endTime" : "2021-04-10 11:10",
+    "artistName" : "Taylor Swift",
+    "trackName" : "gold rush",
+    "msPlayed" : 159809
+  },
+  {
+    "endTime" : "2021-04-10 12:12",
+    "artistName" : "Taylor Swift",
+    "trackName" : "gold rush",
+    "msPlayed" : 159809
+  },
+  {
+    "endTime" : "2021-04-10 16:55",
+    "artistName" : "Taylor Swift",
+    "trackName" : "gold rush",
+    "msPlayed" : 159809
+  },
+  {
+    "endTime" : "2021-04-10 10:10",
+    "artistName" : "Taylor Swift",
+    "trackName" : "Blank Space",
+    "msPlayed" : 100000
+  },
+  {
+    "endTime" : "2021-04-10 10:10",
+    "artistName" : "Taylor Swift",
+    "trackName" : "Shake It Off",
+    "msPlayed" : 100000
+  },
+  {
+    "endTime" : "2021-05-06 12:21",
+    "artistName" : "Big Mountain",
+    "trackName" : "Baby, I Love Your Way",
+    "msPlayed" : 249520
+  },
+  {
+    "endTime" : "2021-05-07 08:20",
+    "artistName" : "The Jam",
+    "trackName" : "Town Called Malice",
+    "msPlayed" : 173320
+  },
+  {
+    "endTime" : "2021-05-07 08:23",
+    "artistName" : "The Jam",
+    "trackName" : "That's Entertainment",
+    "msPlayed" : 212786
+  },
+  {
+    "endTime" : "2021-05-07 08:26",
+    "artistName" : "The Jam",
+    "trackName" : "Going Underground",
+    "msPlayed" : 174506
+  },
+  {
+    "endTime" : "2021-05-07 08:29",
+    "artistName" : "The Jam",
+    "trackName" : "In The City",
+    "msPlayed" : 137800
+  },
+  {
+    "endTime" : "2021-05-07 08:32",
+    "artistName" : "The Jam",
+    "trackName" : "English Rose",
+    "msPlayed" : 169333
+  },
+  {
+    "endTime" : "2021-05-07 08:34",
+    "artistName" : "The Jam",
+    "trackName" : "Start!",
+    "msPlayed" : 149866
+  },
+  {
+    "endTime" : "2021-05-07 08:38",
+    "artistName" : "The Jam",
+    "trackName" : "The Eton Rifles",
+    "msPlayed" : 237560
+  },
+  {
+    "endTime" : "2021-05-07 08:42",
+    "artistName" : "The Jam",
+    "trackName" : "The Bitterest Pill (I Ever Had To Swallow)",
+    "msPlayed" : 213320
+  },
+  {
+    "endTime" : "2021-05-08 12:57",
+    "artistName" : "Daft Punk",
+    "trackName" : "Digital Love",
+    "msPlayed" : 301373
+  },
+  {
+    "endTime" : "2021-05-08 14:09",
+    "artistName" : "Daft Punk",
+    "trackName" : "Giorgio by Moroder",
+    "msPlayed" : 544626
+  },
+  {
+    "endTime" : "2021-05-10 17:26",
+    "artistName" : "Billy Ocean",
+    "trackName" : "Love Really Hurts Without You",
+    "msPlayed" : 179013
+  }
+]
