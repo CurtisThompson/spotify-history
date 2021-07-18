@@ -9,6 +9,8 @@ numpy = "*"
 jupyter = "*"
 requests = "*"
 spotipy = "*"
+matplotlib = "*"
+pillow = "*"
 
 [dev-packages]
 
