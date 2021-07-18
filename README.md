@@ -3,7 +3,7 @@ This repository is for the analysis of Spotify streaming history files obtained 
 
 
 ## Set-Up
-1. Install Python (version 3)
+1. Install Python (version 3 or greater)
 
 2. Install the pipenv package with ```pip install pipenv```
 
@@ -17,8 +17,18 @@ _Authorisation can be obtained by following [the steps listed on the Spotify web
 
 
 ## Usage
-To Do.
+Before calculating any statistics, perform the set-up steps specified in the README. With this step, you should have your own Spotify streaming history to analyse. You should allow be able to make Spotify API calls.
+
+To calculate statistics, instantiate ```StreamingHistory``` class with:  
+```from StreamingHistory import StreamingHistory```  
+You can then call any methods from the class.
 
 
 ## Contributing
-To Do.
+1. Clone the repo and create a new branch
+
+2. Make changes and test with ```data/ExampleData/StreamingHistory0.json```
+
+3. Submit a Pull Request with description of changes
+
+Where possible, please make sure that your changes conform to the [Style Guide for Python Code (PEP8)](https://python.org/dev/peps/pep-0008/).
