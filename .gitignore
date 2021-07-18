@@ -1,4 +1,4 @@
 data/api_keys/
 data/MyData/
-notebooks/.cache
+*/.cache
 notebooks/.ipynb_checkpoints/

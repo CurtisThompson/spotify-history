@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import spotipy
-from spotipy.oauth1 import SpotifyClientCredentials
+from spotipy.oauth2 import SpotifyClientCredentials
 
 
 def read_data(path='../data/ExampleData/StreamingHistory0.json', year=2021):
@@ -102,19 +102,19 @@ def get_artists_from_uris(artist_uris, sp=sp):
     return artist_search
 
 
-def check_uri_for_song(uri, trackName, artistName):
+def check_uri_for_song(song_artists, uri, trackName, artistName):
     """Does an artist URI feature in a given song."""
-    song_filter = (all_songs_with_artists.artistName==artistName) & (all_songs_with_artists.trackName==trackName)
-    return uri in all_songs_with_artists[song_filter].artistURI.unique()
+    song_filter = (song_artists.artistName==artistName) & (song_artists.trackName==trackName)
+    return uri in song_artists[song_filter].artistURI.unique()
 
 
-def get_artists_by_play_time(data, artist_search):
+def get_artists_by_play_time(data, artist_search, all_songs_with_artists):
     """Count play time for each artist."""
     # Get play time for each artist
     df_artists = data[['trackName', 'artistName', 'msPlayed']]
     artist_play_times = []
     for uri in list(artist_search.keys()):
-        artist_play_time = df_artists[df_artists.apply(lambda x: check_uri_for_song(uri, x.trackName, x.artistName), axis=1)].msPlayed.sum()
+        artist_play_time = df_artists[df_artists.apply(lambda x: check_uri_for_song(all_songs_with_artists, uri, x.trackName, x.artistName), axis=1)].msPlayed.sum()
         artist_play_times.append((uri, artist_play_time))
 
     # Get artist names and time
@@ -203,7 +203,7 @@ def get_play_time_string(data):
         time_string += str(total_s) + ' Seconds, '
     time_string = time_string[:-2]
 
-    print(time_string)
+    return time_string
 
 
 def get_days_by_play_time(data):
