@@ -23,9 +23,9 @@ def get_all_songs(data):
     return all_songs.msPlayed.sum().reset_index()
 
 
-def get_dev_keys(): 
+def get_dev_keys(path='../data/api_keys/api_dev_keys.txt'): 
     """Gets the Spotify development keys from file."""
-    with open('../data/api_keys/api_dev_keys.txt', 'r') as f:
+    with open(path, 'r') as f:
         keys = f.read().split('\n')
     return keys[0], keys[1]
 
