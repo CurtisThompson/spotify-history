@@ -64,7 +64,7 @@ class StreamingHistory:
             self.run_api()
         
         # Run artist play time calculations if not already done
-        if self.artist_play_time == None:
+        if self.artist_play_time is None:
             self.artist_play_time = s.get_artists_by_play_time(self.songs, self.artist_search, self.artists)
         
         return self.artist_play_time.sort_values('Minutes', ascending=False).head(n)
@@ -77,8 +77,27 @@ class StreamingHistory:
             self.run_api()
         
         # Run genre play time calcuations if not already done
-        if self.genre_play_time == None:
+        if self.genre_play_time is None:
             self.genre_play_time = s.get_genres_by_play_time(self.songs, self.artist_search, self.artists)
         
         return self.genre_play_time.sort_values('Minutes', ascending=False).head(n)
+    
+    
+    def get_top_artists_in_genre(self, genre, n=5):
+        """Finds the top n artists who belong to a given genre."""
+        # Run API if not already done
+        if not self.is_api_ran:
+            self.run_api()
+        
+        # Run artist play time calculations if not already done
+        if self.artist_play_time is None:
+            self.artist_play_time = s.get_artists_by_play_time(self.songs, self.artist_search, self.artists)
+        
+        artists_in_genre = []
+        for artist in self.artist_search:
+            if genre in self.artist_search[artist]['genres']:
+                artists_in_genre.append(artist)
+        
+        a_df = self.artist_play_time[self.artist_play_time.URI.apply(lambda x: x in artists_in_genre)]
+        return a_df.sort_values('Minutes', ascending=False).head(n)
         

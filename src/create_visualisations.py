@@ -22,10 +22,27 @@ def create_listicle_plot(data, title, file_name):
     # Display bars
     a1.axis('off')
     for i, x in enumerate(data):
-        im = Image.open(requests.get(x[1], stream=True).raw)
-        inset = f.add_axes([.3, .2+(.11*i), .11, .11], label=('img' + str(i)))
-        inset.imshow(im)
-        inset.axis('off')
+        # Display image
+        if type(x[1]) is list:
+            # Image 1
+            im = Image.open(requests.get(x[1][1], stream=True).raw)
+            inset1 = f.add_axes([.3, .23+(.11*i), .08, .08], label=('img' + str(i)))
+            inset1.imshow(im)
+            inset1.axis('off')
+            
+            # Image 2
+            im = Image.open(requests.get(x[1][0], stream=True).raw)
+            inset2 = f.add_axes([.33, .2+(.11*i), .08, .08], label=('img' + str(i)))
+            inset2.imshow(im)
+            inset2.axis('off')
+        else:
+            # Only 1 image anyway
+            im = Image.open(requests.get(x[1], stream=True).raw)
+            inset = f.add_axes([.3, .2+(.11*i), .11, .11], label=('img' + str(i)))
+            inset.imshow(im)
+            inset.axis('off')
+        
+        # Display side text
         f.text(.23, .25+(.11*i), '#'+str(5-i), color=colour_main, fontweight='bold', fontsize=16, ha='center', va='center')
         main_text = x[0][:40] + '...' if len(x[0]) > 42 else x[0]
         f.text(.45, .25+(.11*i), main_text, color=colour_second, fontsize=12)
@@ -53,21 +70,57 @@ def get_artist_image(artistURI):
     art_res = sh.sp.artist(artistURI)
     return art_res['images'][0]['url']
 
-# Top songs
-songs = sh.get_top_songs(n=5)
-songs_list = []
-for index, row in songs.iterrows():
-    song_img = get_song_image(row.artistName, row.trackName)
-    songs_list.append((row.trackName, song_img, row['count']))
-create_listicle_plot(songs_list, 'Top Songs', 'top-songs.png')
 
-# Top genres
-"""
-artists = sh.get_top_artists(n=5)
-print(artists)
-artists_list = []
-for index, row in artists.iterrows():
-    song_img = get_artist_image(row.URI)
-    artists_list.append((row.Name, song_img, row.Minutes))
-create_listicle_plot(artists_list, 'Top Artists', 'top-artists.png')
-"""
+def get_genre_image(genre):
+    gen_uris = sh.get_top_artists_in_genre(genre, n=2)
+    gen_res = []
+    for index, row in gen_uris.iterrows():
+        gen_res.append(get_artist_image(row.URI))
+    return gen_res
+
+
+def build_song_visualisation():
+    # Get top songs
+    songs = sh.get_top_songs(n=5)
+    
+    # Format list correctly
+    songs_list = []
+    for index, row in songs.iterrows():
+        song_img = get_song_image(row.artistName, row.trackName)
+        songs_list.append((row.trackName, song_img, row['count']))
+    
+    # Build visualisation
+    create_listicle_plot(songs_list, 'Top Songs', 'top-songs.png')
+
+
+def build_artist_visualisation():
+    # Get top artists
+    artists = sh.get_top_artists(n=5)
+    
+    # Format list correctly
+    artists_list = []
+    for index, row in artists.iterrows():
+        song_img = get_artist_image(row.URI)
+        artists_list.append((row.Name, song_img, row.Minutes))
+    
+    # Build visualisation
+    create_listicle_plot(artists_list, 'Top Artists', 'top-artists.png')
+
+
+def build_genre_visualisation():
+    # Get top genres
+    genres = sh.get_top_genres(n=5)
+    
+    # Format list correctly
+    genres_list = []
+    for index, row in genres.iterrows():
+        genre_img = get_genre_image(row.Genre)
+        genres_list.append((row.Genre, genre_img, row.Minutes))
+    
+    # Build visualisation
+    create_listicle_plot(genres_list, 'Top Genres', 'top-genres.png')
+
+
+build_song_visualisation()
+build_artist_visualisation()
+build_genre_visualisation()
