@@ -63,6 +63,61 @@ def create_listicle_plot(data, title, file_name, colour_scheme=colour_schemes[0]
     plt.savefig(file_name, bbox_inches='tight', pad_inches=0.05)
 
 
+def create_summary_plot(artists, songs, minutes, genre, image_url, file_name, colour_scheme=colour_schemes[5]):
+    artists = artists[::-1]
+    songs = songs[::-1]
+    genre = genre.title()
+    
+    colour_main = colour_scheme['main']
+    colour_second = colour_scheme['second']
+    colour_background = colour_scheme['background']
+
+    # Create plots
+    f, (a0, a1, a2) = plt.subplots(3, 1, gridspec_kw={'height_ratios': [2, 10, 1]}, figsize=(8, 11))
+
+    # Remove axes
+    a0.axis('off')
+    a1.axis('off')
+    a2.axis('off')
+
+    # Display image
+    im = Image.open(requests.get(image_url, stream=True).raw)
+    inset = f.add_axes([.2, .6, .6, .25])
+    inset.imshow(im)
+    inset.axis('off')
+
+    # Display artists
+    f.text(.2, .55, 'Top Artists', color=colour_main, fontweight='bold', fontsize=16)
+    for i, x in enumerate(artists):
+        main_text = x[:23] + '...' if len(x) > 25 else x
+        f.text(.23, .35+(.04*i), '#'+str(5-i), color=colour_main, fontweight='bold', fontsize=14, ha='center', va='center')
+        f.text(.26, .35+(.04*i), main_text, color=colour_second, fontsize=12, va='center')
+
+    # Display songs
+    f.text(.55, .55, 'Top Songs', color=colour_main, fontweight='bold', fontsize=16)
+    for i, x in enumerate(songs):
+        main_text = x[:23] + '...' if len(x) > 25 else x
+        f.text(.58, .35+(.04*i), '#'+str(5-i), color=colour_main, fontweight='bold', fontsize=14, ha='center', va='center')
+        f.text(.61, .35+(.04*i), main_text, color=colour_second, fontsize=12, va='center')
+
+    # Display time
+    f.text(.55, .27, 'Minutes Played', color=colour_main, fontweight='bold', fontsize=16)
+    f.text(.56, .225, str(minutes), color=colour_second, fontweight='bold', fontsize=14)
+
+    # Display genre
+    f.text(.2, .27, 'Top Genre', color=colour_main, fontweight='bold', fontsize=16)
+    f.text(.21, .225, genre, color=colour_second, fontweight='bold', fontsize=14)
+
+    # Display bottom
+    a2.text(0.1, 0.5, 'Image created with https://github.com/CurtisThompson/spotify-history', color=colour_second, fontsize=10, ha='left', va='center')
+    
+    # Set background colour
+    f.set_facecolor(colour_background)
+    
+    # Save image
+    plt.savefig(file_name, bbox_inches='tight', pad_inches=0.05)
+
+
 def get_song_image(artistName, trackName):
     song_res = sh.sp.search(artistName + ' ' + trackName, limit=1)
     return song_res['tracks']['items'][0]['album']['images'][0]['url']
@@ -79,6 +134,27 @@ def get_genre_image(genre):
     for index, row in gen_uris.iterrows():
         gen_res.append(get_artist_image(row.URI))
     return gen_res
+
+
+def build_summary_visualisation(colour_scheme=colour_schemes[5]):
+    # Get top artists
+    artists = sh.get_top_artists(n=5)
+    top_artist_uri = artists.iloc[0].URI
+    artists = list(artists.Name)
+    image_url = get_artist_image(top_artist_uri)
+    
+    # Get top songs
+    songs = sh.get_top_songs(n=5)
+    songs = list(songs.trackName)
+    
+    # Get top genre
+    genre = sh.get_top_genres(n=1).iloc[0].Genre
+    
+    # Get minutes
+    minutes = sh.get_minutes_played()
+    
+    # Build visualisation
+    create_summary_plot(artists, songs, minutes, genre, image_url, 'summary.png', colour_scheme=colour_scheme)
 
 
 def build_song_visualisation(colour_scheme=colour_schemes[0]):
@@ -126,3 +202,4 @@ def build_genre_visualisation(colour_scheme=colour_schemes[2]):
 build_song_visualisation()
 build_artist_visualisation()
 build_genre_visualisation()
+build_summary_visualisation()

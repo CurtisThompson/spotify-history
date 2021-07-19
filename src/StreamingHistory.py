@@ -39,6 +39,11 @@ class StreamingHistory:
         return s.get_unique_song_count(self.data)
     
     
+    def get_minutes_played(self):
+        """Return the number of minutes played."""
+        return self.data.msPlayed.sum() // 60000
+    
+    
     def get_play_time(self):
         """Return a string detailing how long the listening time is."""
         return s.get_play_time_string(self.data)
