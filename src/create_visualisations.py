@@ -3,21 +3,11 @@ import matplotlib.pyplot as plt
 import requests
 
 from StreamingHistory import StreamingHistory
+from colour_schemes import colour_schemes
 
 # Create an instance of the streaming history class
 sh = StreamingHistory()
 
-colour_schemes = [
-    {'main': 'purple',
-     'second': 'black',
-     'background': 'orange'},
-    {'main': '#292F3D',
-     'second': 'white',
-     'background': '#008DD5'},
-    {'main': '#DAFEB7',
-     'second': '#F2FBE0',
-     'background': '#605B56'},
-]
 
 def create_listicle_plot(data, title, file_name, colour_scheme=colour_schemes[0]):
     colour_main = colour_scheme['main']
@@ -91,7 +81,7 @@ def get_genre_image(genre):
     return gen_res
 
 
-def build_song_visualisation():
+def build_song_visualisation(colour_scheme=colour_schemes[0]):
     # Get top songs
     songs = sh.get_top_songs(n=5)
     
@@ -102,10 +92,10 @@ def build_song_visualisation():
         songs_list.append((row.trackName, song_img, row['count']))
     
     # Build visualisation
-    create_listicle_plot(songs_list, 'Top Songs', 'top-songs.png', colour_scheme=colour_schemes[0])
+    create_listicle_plot(songs_list, 'Top Songs', 'top-songs.png', colour_scheme=colour_scheme)
 
 
-def build_artist_visualisation():
+def build_artist_visualisation(colour_scheme=colour_schemes[1]):
     # Get top artists
     artists = sh.get_top_artists(n=5)
     
@@ -116,10 +106,10 @@ def build_artist_visualisation():
         artists_list.append((row.Name, song_img, row.Minutes))
     
     # Build visualisation
-    create_listicle_plot(artists_list, 'Top Artists', 'top-artists.png', colour_scheme=colour_schemes[1])
+    create_listicle_plot(artists_list, 'Top Artists', 'top-artists.png', colour_scheme=colour_scheme)
 
 
-def build_genre_visualisation():
+def build_genre_visualisation(colour_scheme=colour_schemes[2]):
     # Get top genres
     genres = sh.get_top_genres(n=5)
     
@@ -130,7 +120,7 @@ def build_genre_visualisation():
         genres_list.append((row.Genre, genre_img, row.Minutes))
     
     # Build visualisation
-    create_listicle_plot(genres_list, 'Top Genres', 'top-genres.png', colour_scheme=colour_schemes[2])
+    create_listicle_plot(genres_list, 'Top Genres', 'top-genres.png', colour_scheme=colour_scheme)
 
 
 build_song_visualisation()
