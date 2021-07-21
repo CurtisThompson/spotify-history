@@ -1,5 +1,7 @@
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_pdf import PdfPages
 
 import statistics as s
 
@@ -105,4 +107,59 @@ class StreamingHistory:
         
         a_df = self.artist_play_time[self.artist_play_time.URI.apply(lambda x: x in artists_in_genre)]
         return a_df.sort_values('Minutes', ascending=False).head(n)
+    
+    
+    def statistics_to_pdf(self, song_n=20, artist_n=20, genre_n=20):
+        """Saves a pdf of main statistics"""
         
+        with PdfPages('test-pdf.pdf') as pdf:
+            # Calculate fig height
+            fig_height = (song_n // 5) + 1
+            
+            # Get songs to output
+            songs = self.get_top_songs(n=song_n)
+            songs.columns = ['Artist', 'Song', 'Plays']
+            
+            # Output to pdf
+            plt.figure(figsize=(12, fig_height))
+            plt.axis('tight')
+            plt.axis('off')
+            plt.table(cellText=songs.values,colLabels=songs.columns,loc='center')
+            plt.title('Top Songs')
+            pdf.savefig()
+            plt.close()
+            
+            
+            # Calculate fig height
+            fig_height = (artist_n // 5) + 1
+            
+            # Get artists to output
+            artists = self.get_top_artists(n=artist_n)[['Name', 'Minutes']]
+            artists['Minutes'] = artists.Minutes.apply(lambda x: round(x))
+            
+            # Output to pdf
+            plt.figure(figsize=(12, fig_height))
+            plt.axis('tight')
+            plt.axis('off')
+            plt.table(cellText=artists.values,colLabels=artists.columns,loc='center')
+            plt.title('Top Artists')
+            pdf.savefig()
+            plt.close()
+            
+            
+            # Calculate fig height
+            fig_height = (genre_n // 5) + 1
+            
+            # Get genres to output
+            genres = self.get_top_genres(n=genre_n)[['Genre', 'Minutes']]
+            genres['Minutes'] = genres.Minutes.apply(lambda x: round(x))
+            
+            # Output to pdf
+            plt.figure(figsize=(12, fig_height))
+            plt.axis('tight')
+            plt.axis('off')
+            plt.table(cellText=genres.values,colLabels=genres.columns,loc='center')
+            plt.title('Top Genres')
+            pdf.savefig()
+            plt.close()
+
