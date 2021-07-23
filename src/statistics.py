@@ -30,12 +30,12 @@ def get_dev_keys(path='../data/api_keys/api_dev_keys.txt'):
     return keys[0], keys[1]
 
 
-SPOTIPY_CLIENT_ID, SPOTIPY_CLIENT_SECRET = get_dev_keys()
-client_credentials_manager = SpotifyClientCredentials(client_id=SPOTIPY_CLIENT_ID, client_secret=SPOTIPY_CLIENT_SECRET)
-sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
+#SPOTIPY_CLIENT_ID, SPOTIPY_CLIENT_SECRET = get_dev_keys()
+#client_credentials_manager = SpotifyClientCredentials(client_id=SPOTIPY_CLIENT_ID, client_secret=SPOTIPY_CLIENT_SECRET)
+#sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 
-def get_song_artists_through_api(artist, track, sp=sp):
+def get_song_artists_through_api(artist, track, sp):
     """Get all song artist details for a song using the Spotify API."""
     search_query = artist + ' ' + track
     song_details = sp.search(search_query, limit=1)
@@ -43,7 +43,7 @@ def get_song_artists_through_api(artist, track, sp=sp):
     return song_artists
 
 
-def get_songs_artists_frame(songs_df, sp=sp):
+def get_songs_artists_frame(songs_df, sp):
     """Gets all possible artists for all possible songs in a DataFrame."""
     all_songs_with_artists = []
 
@@ -92,7 +92,7 @@ def get_songs_artists_frame(songs_df, sp=sp):
     return all_songs_with_artists, artist_uris
 
 
-def get_artists_from_uris(artist_uris, sp=sp):
+def get_artists_from_uris(artist_uris, sp):
     """Convert a list of artist URIs to data dicts with the Spotify API."""
     artist_search = {}
     for i in range(0, len(artist_uris), 50):

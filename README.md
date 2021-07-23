@@ -19,7 +19,18 @@ _Authorisation can be obtained by following [the steps listed on the Spotify web
 ## Usage
 Before calculating any statistics, perform the set-up steps specified in the README. With this step, you should have your own Spotify streaming history to analyse. You should also be able to make Spotify API calls.
 
-To calculate statistics, instantiate the ```StreamingHistory``` class with:
+To run the complete code and produce visualisations from your streaming history, run:
+
+```pipenv run main.py```
+
+This will produce a summary visualisation as well as extra visualisations for the top songs, artists, and genres. You can also use the following options with this command:
+ - -s (_produce a summary visualisation_)
+ - -t (_produce a song (track) visualisation_)
+ - -a (_produce an artist visualisation_)
+ - -g (_produce a genre visualisation_)
+ - -p (_output a pdf of the main statistics_)
+
+To calculate individual statistics, instantiate the ```StreamingHistory``` class with:
 
 ```from StreamingHistory import StreamingHistory```  
 

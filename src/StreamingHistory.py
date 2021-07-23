@@ -59,8 +59,8 @@ class StreamingHistory:
     def run_api(self):
         """Get all necessary data from the Spotify API."""
         if not self.is_api_ran:
-            self.artists, self.uris = s.get_songs_artists_frame(self.songs, sp=self.sp)
-            self.artist_search = s.get_artists_from_uris(self.uris, sp=self.sp)
+            self.artists, self.uris = s.get_songs_artists_frame(self.songs, self.sp)
+            self.artist_search = s.get_artists_from_uris(self.uris, self.sp)
             self.is_api_ran = True
     
     

@@ -4,11 +4,8 @@ import requests
 
 from StreamingHistory import StreamingHistory
 from colour_schemes import colour_schemes
-
-# Create an instance of the streaming history class
-sh = StreamingHistory()
-
-
+    
+    
 def create_listicle_plot(data, title, file_name, colour_scheme=colour_schemes[0]):
     colour_main = colour_scheme['main']
     colour_second = colour_scheme['second']
@@ -118,30 +115,30 @@ def create_summary_plot(artists, songs, minutes, genre, image_url, file_name, co
     plt.savefig(file_name, bbox_inches='tight', pad_inches=0.05)
 
 
-def get_song_image(artistName, trackName):
+def get_song_image(sh, artistName, trackName):
     song_res = sh.sp.search(artistName + ' ' + trackName, limit=1)
     return song_res['tracks']['items'][0]['album']['images'][0]['url']
 
 
-def get_artist_image(artistURI):
+def get_artist_image(sh, artistURI):
     art_res = sh.sp.artist(artistURI)
     return art_res['images'][0]['url']
 
 
-def get_genre_image(genre):
+def get_genre_image(sh, genre):
     gen_uris = sh.get_top_artists_in_genre(genre, n=2)
     gen_res = []
     for index, row in gen_uris.iterrows():
-        gen_res.append(get_artist_image(row.URI))
+        gen_res.append(get_artist_image(sh, row.URI))
     return gen_res
 
 
-def build_summary_visualisation(colour_scheme=colour_schemes[5]):
+def build_summary_visualisation(sh, colour_scheme=colour_schemes[5]):
     # Get top artists
     artists = sh.get_top_artists(n=5)
     top_artist_uri = artists.iloc[0].URI
     artists = list(artists.Name)
-    image_url = get_artist_image(top_artist_uri)
+    image_url = get_artist_image(sh, top_artist_uri)
     
     # Get top songs
     songs = sh.get_top_songs(n=5)
@@ -157,49 +154,54 @@ def build_summary_visualisation(colour_scheme=colour_schemes[5]):
     create_summary_plot(artists, songs, minutes, genre, image_url, 'summary.png', colour_scheme=colour_scheme)
 
 
-def build_song_visualisation(colour_scheme=colour_schemes[0]):
+def build_song_visualisation(sh, colour_scheme=colour_schemes[0]):
     # Get top songs
     songs = sh.get_top_songs(n=5)
     
     # Format list correctly
     songs_list = []
     for index, row in songs.iterrows():
-        song_img = get_song_image(row.artistName, row.trackName)
+        song_img = get_song_image(sh, row.artistName, row.trackName)
         songs_list.append((row.trackName, song_img, row['count']))
     
     # Build visualisation
     create_listicle_plot(songs_list, 'Top Songs', 'top-songs.png', colour_scheme=colour_scheme)
 
 
-def build_artist_visualisation(colour_scheme=colour_schemes[1]):
+def build_artist_visualisation(sh, colour_scheme=colour_schemes[1]):
     # Get top artists
     artists = sh.get_top_artists(n=5)
     
     # Format list correctly
     artists_list = []
     for index, row in artists.iterrows():
-        song_img = get_artist_image(row.URI)
+        song_img = get_artist_image(sh, row.URI)
         artists_list.append((row.Name, song_img, row.Minutes))
     
     # Build visualisation
     create_listicle_plot(artists_list, 'Top Artists', 'top-artists.png', colour_scheme=colour_scheme)
 
 
-def build_genre_visualisation(colour_scheme=colour_schemes[2]):
+def build_genre_visualisation(sh, colour_scheme=colour_schemes[2]):
     # Get top genres
     genres = sh.get_top_genres(n=5)
     
     # Format list correctly
     genres_list = []
     for index, row in genres.iterrows():
-        genre_img = get_genre_image(row.Genre)
+        genre_img = get_genre_image(sh, row.Genre)
         genres_list.append((row.Genre, genre_img, row.Minutes))
     
     # Build visualisation
     create_listicle_plot(genres_list, 'Top Genres', 'top-genres.png', colour_scheme=colour_scheme)
 
 
-build_song_visualisation()
-build_artist_visualisation()
-build_genre_visualisation()
-build_summary_visualisation()
+if __name__ == "__main__":
+    # Create an instance of the streaming history class
+    sh = StreamingHistory()
+    
+    # Create visualisations
+    build_song_visualisation(sh)
+    build_artist_visualisation(sh)
+    build_genre_visualisation(sh)
+    build_summary_visualisation(sh)
