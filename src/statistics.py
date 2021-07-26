@@ -1,20 +1,31 @@
+import os
+
 import numpy as np
 import pandas as pd
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
 
-def read_data(path='../data/ExampleData/StreamingHistory0.json', year=2021):
+def read_data(path='../data/ExampleData/', year=2021):
     """Import JSON streaming data."""
-    # Read in the JSON data
-    data = pd.read_json(path)
+    data_dfs = []
+    # Get list of streaming history files
+    directory_files = os.listdir(path)
+    directory_files = [x for x in directory_files if x[:16] == 'StreamingHistory' and x[-5:] == '.json']
     
-    # Filter by year
-    if year != None:
-        data = data[(data.endTime >= str(year)+'-01-01')
-                  & (data.endTime <= str(year)+'-12-31')]
+    for file in directory_files:
+        # Read in the JSON data
+        data = pd.read_json(path + file)
+        
+        # Filter by year
+        if year != None:
+            data = data[(data.endTime >= str(year)+'-01-01')
+                      & (data.endTime <= str(year)+'-12-31')]
+        
+        # Add to list
+        data_dfs.append(data)
     
-    return data
+    return pd.concat(data_dfs)
 
 
 def get_all_songs(data):

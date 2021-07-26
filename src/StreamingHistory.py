@@ -7,7 +7,7 @@ import statistics as s
 
 
 class StreamingHistory:
-    def __init__(self, data_path='../data/ExampleData/StreamingHistory0.json',
+    def __init__(self, data_path='../data/ExampleData/',
                  key_path='../data/api_keys/api_dev_keys.txt',
                  year=2021):
         """Instantiate class."""

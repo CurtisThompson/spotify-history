@@ -30,7 +30,7 @@ def main():
             key_path = run_options[key_index]
     
     # Default streaming history path
-    data_path = './data/ExampleData/StreamingHistory0.json'
+    data_path = './data/ExampleData/'
     # Get user input data path if given
     if '-d' in run_options:
         data_index = run_options.index('-d') + 1
