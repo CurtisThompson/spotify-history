@@ -8,13 +8,14 @@ import statistics as s
 
 class StreamingHistory:
     def __init__(self, data_path='../data/ExampleData/StreamingHistory0.json',
-                 key_path='../data/api_keys/api_dev_keys.txt'):
+                 key_path='../data/api_keys/api_dev_keys.txt',
+                 year=2021):
         """Instantiate class."""
         self.SPOTIPY_CLIENT_ID, self.SPOTIPY_CLIENT_SECRET = s.get_dev_keys(path=key_path)
         client_credentials_manager = SpotifyClientCredentials(client_id=self.SPOTIPY_CLIENT_ID, client_secret=self.SPOTIPY_CLIENT_SECRET)
         self.sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
         
-        self.data = s.read_data(path=data_path)
+        self.data = s.read_data(path=data_path, year=year)
         self.songs = s.get_all_songs(self.data)
         self.artists = None
         self.uris = None

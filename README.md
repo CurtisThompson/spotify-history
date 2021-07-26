@@ -29,6 +29,9 @@ This will produce a summary visualisation as well as extra visualisations for th
  - -a (_produce an artist visualisation_)
  - -g (_produce a genre visualisation_)
  - -p (_output a pdf of the main statistics_)
+ - -k [path] (_specify the path to the key file_)
+ - -d [path] (_specify the path to the data directory_)
+ - -y [year] (_specify the year to get statistics for_)
 
 To calculate individual statistics, instantiate the ```StreamingHistory``` class with:
 
